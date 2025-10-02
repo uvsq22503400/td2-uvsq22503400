@@ -28,7 +28,12 @@ Il pourra éventuellement être nécessaire de [configurer le proxy](http://mave
 À chaque étape, validez vos modifications avec `git` et si nécessaire, exécutez le cycle maven adapté pour vérifier vos manipulations.
 
 1.  Quelles conventions utilise Maven pour l’arborescence des répertoires ?
-    > RÉPONDRE ICI
+    >src/main/java/ : code source principal
+src/main/resources/ : ressources pour le programme
+src/test/java/ : code des tests unitaires
+src/test/resources/ : ressources pour les tests
+target/ : fichiers compilés et build (généré automatiquement)
+pom.xml : fichier de configuration Maven
 1.  Examinez le projet Maven ainsi que le fichier de description et répondez aux questions suivantes :
     1.  Dans quel répertoire se trouvent les fichiers sources du projet ? Les sources des tests ?
 > Les fichiers sources du projet se trouvent dans src/main/java.
@@ -51,14 +56,27 @@ maven.compiler.target : Version de la JVM cible
     1.  fixez la version des sources et des .class pour utiliser la version 17 de Java
     1.  utilisez la dernière version stable de JUnit 4 (cf. [MVNRepository](https://mvnrepository.com/))
 1.  Ajoutez un fichier `.gitignore` adapté aux projets Maven (cf. [A collection of .gitignore templates](https://github.com/github/gitignore)) et ajoutez-y les fichiers et répertoires de votre IDE.
+# Maven
+target/
+
+# IDEs
+.vscode/
+*.iml
+.idea/
+*.class
+
+# OS
+.DS_Store
+Thumbs.db
+
 1.  Quelle commande Maven permet de :
     1.  créer un `jar` du projet ?
-        > RÉPONDRE ICI
-    1. lancer les tests ?
-        > RÉPONDRE ICI
-    1. supprimer tous les fichiers issus de la compilation ?
-        > RÉPONDRE ICI
-1.  Ajoutez une classe `ChaineCryptee` et une classe `ChaineCrypteeTest` dans les répertoires et packages appropriés.
+        > mvn package
+1. lancer les tests ?
+        mvn test
+1. supprimer tous les fichiers issus de la compilation ?
+mvn clean
+ajoutez une classe `ChaineCryptee` et une classe `ChaineCrypteeTest` dans les répertoires et packages appropriés.
     Supprimez les classes d'exemple `App` et `AppTest`.
 1.  Énumérez une liste de cas de tests à réaliser en n'oubliant pas les cas d'erreur.
     > RÉPONDRE ICI
