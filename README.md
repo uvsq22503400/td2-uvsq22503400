@@ -79,7 +79,11 @@ mvn clean
 ajoutez une classe `ChaineCryptee` et une classe `ChaineCrypteeTest` dans les répertoires et packages appropriés.
     Supprimez les classes d'exemple `App` et `AppTest`.
 1.  Énumérez une liste de cas de tests à réaliser en n'oubliant pas les cas d'erreur.
-    > RÉPONDRE ICI
+    > Chaîne simple
+chaîne vide
+Chaîne avec caractères spéciaux
+Chaîne null (cas d’erreur)
+Chaîne très longue
 1.  Pour chaque cas de test,
     1. écrivez le test JUnit correspondant dans la classe de test,
     1. vérifiez qu’il échoue,
@@ -88,7 +92,7 @@ ajoutez une classe `ChaineCryptee` et une classe `ChaineCrypteeTest` dans les r�
     1. appliquez un étape de refactoring sur les tests et la classe si nécessaire.
 1.  Comment se comporte votre classe si la chaîne passée au constructeur est `null` ?
 Vous pouvez utiliser le débogueur pour identifier le problème (s'il y a un problème) au niveau de `crypte`.
-    > RÉPONDRE ICI
+    > Si la chaîne passée au constructeur est null, la méthode crypte() lève généralement une NullPointerException lors de l’appel à des méthodes sur la chaîne (exemple : length(), charAt()). Le code ne gère pas ce cas
     1. ajoutez un test pour prendre en compte la chaîne `null`,
     1. si nécessaire, modifiez la classe pour faire passer le test
 1. Changez la représentation interne de la classe : seule la chaîne cryptée est stockée (plus la chaîne en clair).
